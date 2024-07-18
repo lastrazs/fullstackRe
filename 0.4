@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+    User->>Browser: Fills out the form
+    Browser->>Server: POST /api/new-note
+    Note right of Server: Processes the request and saves the note
+    Server-->>Browser: Response 201 Created
+    Browser-->>User: Shows confirmation
+s
