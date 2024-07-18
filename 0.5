@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+
+    User->>Browser: Opens the web page
+    Browser->>Server: Requests the main HTML file
+    Server-->>Browser: Returns the HTML file
+    Browser->>Server: Requests CSS and JavaScript files
+    Server-->>Browser: Returns CSS and JavaScript files
+    Browser->>Browser: Renders the initial page
+    User->>Browser: Interacts with the page (clicks a link)
+    Browser->>Server: Requests necessary data (AJAX)
+    Server-->>Browser: Returns data in JSON format
+    Browser->>Browser: Updates the view with the new data
